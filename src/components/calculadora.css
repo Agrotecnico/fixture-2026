@@ -1,0 +1,79 @@
+/* Centrar la calculadora en la pantalla */
+.calculator-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* min-height: 100vh; */
+  background-color: #242424;
+  font-family: Arial, sans-serif;
+  border-radius: 12px;
+}
+
+/* Caja principal de la calculadora */
+.calculator {
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.5);
+  width: 300px;
+}
+
+/* Pantalla de resultados */
+.display {
+  background-color: #333;
+  color: #fff;
+  font-size: 2.5rem;
+  text-align: right;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+/* Rejilla para ordenar los botones en 4 columnas */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+/* Estilo base de los botones */
+button {
+  background-color: #444;
+  color: white;
+  border: none;
+  padding: 20px;
+  font-size: 1.25rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+/* Estilos específicos para operadores e igual */
+.btn-operator {
+  background-color: #ff9f0a;
+  color: white;
+}
+
+.btn-operator:hover {
+  background-color: #cc7f08;
+}
+
+.btn-equal {
+  background-color: #30d158;
+  color: white;
+  grid-row: span 2; /* Ocupa el espacio de dos filas hacia abajo */
+}
+
+.btn-equal:hover {
+  background-color: #24a143;
+}
+
+.btn-zero {
+  grid-column: span 2; /* Ocupa el espacio de dos columnas */
+}
